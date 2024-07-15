@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoFinal.View.MenuPage"
+             Title="MenuPage">
+    <VerticalStackLayout>
+
+        <Grid>
+            <!-- Sidebar Navigation (using ListView) -->
+            <ListView x:Name="MenuListView"
+                  BackgroundColor="Blue"
+                  Header="Menú"
+                  IsPullToRefreshEnabled="False"
+                  SeparatorVisibility="None"
+                  SelectionMode="Single"
+                  ItemSelected="MenuListView_ItemSelected">
+                <ListView.ItemsSource>
+                    <x:Array  Type="{x:Type x:String}">
+                        <x:String>Inicio</x:String>
+                        <x:String>Negocios</x:String>
+                        <x:String>Perfil</x:String>
+                        <!-- Agrega más opciones según tus necesidades -->
+                    </x:Array>
+                </ListView.ItemsSource>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10">
+                                <Label Text="{Binding .}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <!-- Contenido principal -->
+            <StackLayout Grid.Column="1">
+                <Label Text="Contenido principal"
+                   FontSize="Large"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand" />
+            </StackLayout>
+        </Grid>
+
+
+
+    </VerticalStackLayout>
+</ContentPage>

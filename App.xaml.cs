@@ -1,4 +1,6 @@
-﻿namespace ProyectoFinal
+﻿using ProyectoFinal.View;
+
+namespace ProyectoFinal
 {
     public partial class App : Application
     {
@@ -6,7 +8,7 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(new LoginPage());
         }
     }
 }
