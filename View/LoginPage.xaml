@@ -2,11 +2,96 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoFinal.View.LoginPage"
-             Title="LoginPage">
-    <StackLayout Padding="20">
-        <Entry x:Name="UsernameEntry" Placeholder="Username" />
-        <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True" />
-        <Button Text="Login" Clicked="Button_Clicked" />
-        <Button Text="Register" Clicked="Button_Clicked_1" />
-    </StackLayout>
+             Title="Login">
+    <VerticalStackLayout
+        Spacing="20"
+        Padding="20">
+
+        <Grid RowSpacing="15">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label 
+                Text="Inicio de Sesión"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"  
+                FontSize="25"
+                FontAttributes="Bold" 
+                Grid.Row="0"
+                Grid.Column="0"/>
+
+            <Image Source="logo.png" WidthRequest="150" 
+                Grid.Row="0"
+                Grid.Column="1"/>
+        </Grid>
+
+        <Grid RowSpacing="15">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="7*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Usuario"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Center"
+                   FontSize="18"
+                   Grid.Row="0"
+                   Grid.Column="0"/>
+
+            <Entry x:Name="UsernameEntry"
+                   Placeholder="Ingrese un usuario"
+                   FontSize="15"
+                   Grid.Row="0"
+                   Grid.Column="1" />
+
+            <Label Text="Contraseña"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Center"
+                   FontSize="18"
+                   Grid.Row="1"
+                   Grid.Column="0"/>
+
+            <Entry x:Name="PasswordEntry"
+                   Placeholder="Ingrese la contraseña"
+                   FontSize="15"
+                   IsPassword="True" 
+                   Grid.Row="1"
+                   Grid.Column="1" />
+        </Grid>
+
+        <Grid RowSpacing="15">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button Text="Ingresar" 
+                    Clicked="Button_Clicked" 
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    BackgroundColor="Tomato"
+                    HeightRequest="50"
+                    WidthRequest="150"/>
+            <Button Text="Registrar" 
+                    Clicked="Button_Clicked_1" 
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    BackgroundColor="Tomato"
+                    HeightRequest="50"
+                    WidthRequest="150"/>
+        </Grid>
+        
+    </VerticalStackLayout>
 </ContentPage>

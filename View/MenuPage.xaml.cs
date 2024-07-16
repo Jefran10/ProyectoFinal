@@ -1,5 +1,4 @@
 using Microsoft.Maui.Controls;
-using Microsoft.Maui.Essentials;
 using Microsoft.Maui.Maps;
 using System;
 using System.Threading.Tasks;
@@ -75,12 +74,12 @@ namespace ProyectoFinal.View
 
                     // Mostrar la ubicación en el mapa
                     MyMapView.Pins.Clear();
-                    var pin = new Pin
+                    /*varpin = new Pin
                     {
                         Label = "Ubicación actual",
                         Location = new Location(location.Latitude, location.Longitude)
                     };
-                    MyMapView.Pins.Add(pin);
+                    MyMapView.Pins.Add(pin);*/
                     MyMapView.MoveToRegion(MapSpan.FromCenterAndRadius(new Location(location.Latitude, location.Longitude), Distance.FromKilometers(1)));
                 }
                 else
