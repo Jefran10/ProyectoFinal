@@ -33,6 +33,7 @@ public partial class LoginPage : ContentPage
              await Navigation.PushAsync(new MenuPage());
         }
         else
+
         {
              await DisplayAlert("Error", "Usuario o contraseña incorrectos", "Aceptar");
 

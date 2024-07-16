@@ -48,6 +48,7 @@ namespace ProyectoFinal.View
         private async void GetAndDisplayCurrentLocation()
         {
             try
+
             {
                 var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>();
                 if (status != PermissionStatus.Granted)

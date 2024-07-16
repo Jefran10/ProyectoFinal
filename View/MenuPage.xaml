@@ -21,6 +21,7 @@
                 </x:Array>
             </ListView.ItemsSource>
             <ListView.ItemTemplate>
+                
                 <DataTemplate>
                     <TextCell Text="{Binding}" TextColor="Black" />
                 </DataTemplate>
