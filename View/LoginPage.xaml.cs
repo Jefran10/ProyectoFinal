@@ -34,7 +34,7 @@ public partial class LoginPage : ContentPage
         }
         else
         {
-            await DisplayAlert("Error", "Usuario o contraseña incorrectos", "Aceptar");
+             await DisplayAlert("Error", "Usuario o contraseña incorrectos", "Aceptar");
 
         }
 
