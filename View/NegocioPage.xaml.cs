@@ -21,12 +21,6 @@ public partial class NegocioPage : ContentPage
 
     private async void btnDetalle_Clicked(object sender, EventArgs e)
     {
-        if (sender is Button btn)
-        {
-            if (btn.BindingContext is Models.Business negocio)
-            {
                 await Navigation.PushAsync(new DetallePage(usuario));
-            }
-        }
     }
 }

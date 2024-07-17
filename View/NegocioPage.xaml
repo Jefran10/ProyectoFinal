@@ -3,6 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoFinal.View.NegocioPage"
              Title="NegocioPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:Array x:Key="NegociosItems" Type="{x:Type x:String}">
+                <x:String>Comida rápida;Marieta de Veintimilla</x:String>
+                <x:String>Comida rápida 2;Ubicación 2</x:String>
+                <x:String>Comida rápida 3;Ubicación 3</x:String>
+            </x:Array>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <VerticalStackLayout
         Spacing="20"
         Padding="20">
@@ -45,7 +56,7 @@
                 <Label Text="Ubicación" Grid.Column="1" HorizontalOptions="Start" TextColor="Red"/>
                 <Label Text="" Grid.Column="2" HorizontalOptions="Start" TextColor="Red"/>
             </Grid>
-            <ListView>
+            <ListView ItemsSource="{StaticResource NegociosItems}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -55,13 +66,12 @@
                                     <ColumnDefinition Width="2*" />
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
-                                <Label Text="Comida rápida" Grid.Column="0" HorizontalOptions="Start" />
-                                <Label Text="Marieta de Veintimilla" Grid.Column="1" HorizontalOptions="Start" />
+                                <Label Text="{Binding Path=., StringFormat='{0:split(;)[0]}'}" Grid.Column="0" HorizontalOptions="Start" />
+                                <Label Text="{Binding Path=., StringFormat='{0:split(;)[1]}'}" Grid.Column="1" HorizontalOptions="Start" />
                                 <Button x:Name="btnDetalle" Text="Detalle" Grid.Column="2" Clicked="btnDetalle_Clicked"/>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
-                    
                 </ListView.ItemTemplate>
             </ListView>
         </StackLayout>
