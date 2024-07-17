@@ -22,5 +22,6 @@ public partial class NegocioPage : ContentPage
     private async void btnDetalle_Clicked(object sender, EventArgs e)
     {
                 await Navigation.PushAsync(new DetallePage(usuario));
+
     }
 }
