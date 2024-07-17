@@ -45,7 +45,7 @@
                 <Label Text="Ubicación" Grid.Column="1" HorizontalOptions="Start" TextColor="Red"/>
                 <Label Text="" Grid.Column="2" HorizontalOptions="Start" TextColor="Red"/>
             </Grid>
-            <ListView x:Name="listaNegocios">
+            <ListView>
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -55,8 +55,8 @@
                                     <ColumnDefinition Width="2*" />
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
-                                <Label x:Name="lblNombre" Text="{Binding name}" Grid.Column="0" HorizontalOptions="Start" />
-                                <Label x:Name="lblUbicacion" Text="{Binding address}" Grid.Column="1" HorizontalOptions="Start" />
+                                <Label Text="Comida rápida" Grid.Column="0" HorizontalOptions="Start" />
+                                <Label Text="Marieta de Veintimilla" Grid.Column="1" HorizontalOptions="Start" />
                                 <Button x:Name="btnDetalle" Text="Detalle" Grid.Column="2" Clicked="btnDetalle_Clicked"/>
                             </Grid>
                         </ViewCell>

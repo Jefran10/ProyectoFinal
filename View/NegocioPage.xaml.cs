@@ -16,13 +16,7 @@ public partial class NegocioPage : ContentPage
     }
     public async void listar()
     {
-        ObservableCollection<Models.Business> usu;
-        HttpClient cliente = new HttpClient();
-        String url = "http://192.168.200.7/proyecto/usuarios.php";
-        var content = await cliente.GetStringAsync(url);
-        List<Models.Business> mostrar = JsonConvert.DeserializeObject<List<Models.Business>>(content);
-        usu = new ObservableCollection<Models.Business>(mostrar);
-        listaNegocios.ItemsSource = usu;
+
     }
 
     private async void btnDetalle_Clicked(object sender, EventArgs e)

@@ -6,9 +6,9 @@ public partial class DetallePage : ContentPage
 	{
 		InitializeComponent();
         lblUsuario.Text = user;
-       // lblUbicacion.Text = negocio.address;
-        //lblNegocio.Text = negocio.name;
-        //lblCategoria.Text = negocio.category;
-       // lblDescripcion.Text = negocio.description;
+        lblUbicacion.Text = "Marieta de Veintimilla";
+        lblNegocio.Text = "Comida rápida";
+        lblCategoria.Text = "Comida";
+        lblDescripcion.Text = "Venta de comida rápida como: papas fritas, hamburguesas";
     }
 }
