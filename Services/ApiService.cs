@@ -74,6 +74,34 @@ namespace ProyectoFinal.Services
             }
         }
 
+        public async Task<bool> ReadBusinessesAsync()
+        {
+            var userData = new { };
+            var json = JsonConvert.SerializeObject(userData);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            try
+            {
+                HttpResponseMessage response = await _client.PostAsync("http://localhost/api/businesses/read.php", content);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    return true;
+
+
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error en RegisterAsync: {ex.Message}");
+                return false;
+            }
+        }
+
         // Clase para deserializar la respuesta del token
         private class TokenResponse
         {

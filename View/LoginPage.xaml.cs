@@ -25,12 +25,14 @@ public partial class LoginPage : ContentPage
 
         // Llamar al método de login en ApiService
         bool success = await _apiService.LoginAsync(username, password);
-
+        //bool success = true;
 
         if (success)
         {
             // Navegar a la siguiente página después del login (por ejemplo, MainPage)
-             await Navigation.PushAsync(new MenuPage());
+             //await Navigation.PushAsync(new MenuPage());
+
+            await Navigation.PushAsync(new MapaPage(username));
         }
         else
 
